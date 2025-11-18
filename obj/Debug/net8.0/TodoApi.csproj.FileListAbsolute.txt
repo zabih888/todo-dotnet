@@ -110,3 +110,4 @@
 /home/zabih/Documents/back-end/TodoApi/obj/Debug/net8.0/TodoApi.pdb
 /home/zabih/Documents/back-end/TodoApi/obj/Debug/net8.0/TodoApi.genruntimeconfig.cache
 /home/zabih/Documents/back-end/TodoApi/obj/Debug/net8.0/ref/TodoApi.dll
+/home/zabih/Documents/back-end/TodoApi/obj/Debug/net8.0/TodoApi.sourcelink.json
