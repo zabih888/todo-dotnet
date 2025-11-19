@@ -10,4 +10,6 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Todo> Todos => Set<Todo>();
+
+    public DbSet<User> Users => Set<User>();
 }
