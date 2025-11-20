@@ -22,6 +22,8 @@ AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 // TodoService (must be scoped, not singleton)
 builder.Services.AddScoped<TodoService>();
+builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<JwtService>();
 
 var app = builder.Build();
 
@@ -30,6 +32,22 @@ app.UseSwagger();
 app.UseSwaggerUI();
 
 // ------------------- ENDPOINTS ---------------------
+
+app.MapPost("/signup", async (SignupDto dto, UserService users, JwtService jwt) =>
+{
+   var user = await users.CreateUser(dto.UserName,dto.Password);
+   var token = jwt.CreateToken(user);
+   return Results.Ok(new {token}); 
+});
+
+app.MapPost("/login", async(LoginDto dto, UserService users, JwtService jwt) =>
+{
+    var user = await users.ValidateUser(dto.UserName, dto.Password);
+    if(user == null) return Results.Unauthorized();
+
+    var token = jwt.CreateToken(user);
+    return Results.Ok(new {token});
+});
 
 app.MapGet("/todos", async (TodoService service) =>
 {
