@@ -236,3 +236,15 @@
 /home/zabih/projects/back-end/todo-dotnet/obj/Debug/net8.0/TodoApi.pdb
 /home/zabih/projects/back-end/todo-dotnet/obj/Debug/net8.0/TodoApi.genruntimeconfig.cache
 /home/zabih/projects/back-end/todo-dotnet/obj/Debug/net8.0/ref/TodoApi.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/Microsoft.Extensions.ObjectPool.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/Microsoft.Extensions.WebEncoders.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/System.Security.Cryptography.Xml.dll
+/home/zabih/Documents/back-end/TodoApi/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll

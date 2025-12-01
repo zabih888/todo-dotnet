@@ -1,8 +1,5 @@
-using FluentValidation;
-using Microsoft.EntityFrameworkCore;
 
-using TodoApi.Dtos;
-using TodoApi.Models;
+using Microsoft.EntityFrameworkCore;
 using TodoApi.Services;
 using TodoApi.Data;
 
@@ -31,63 +28,8 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-// ------------------- ENDPOINTS ---------------------
 
-app.MapPost("/signup", async (SignupDto dto, UserService users, JwtService jwt) =>
-{
-   var user = await users.CreateUser(dto.UserName,dto.Password);
-   var token = jwt.CreateToken(user);
-   return Results.Ok(new {token}); 
-});
-
-app.MapPost("/login", async(LoginDto dto, UserService users, JwtService jwt) =>
-{
-    var user = await users.ValidateUser(dto.UserName, dto.Password);
-    if(user == null) return Results.Unauthorized();
-
-    var token = jwt.CreateToken(user);
-    return Results.Ok(new {token});
-});
-
-app.MapGet("/todos", async (TodoService service) =>
-{
-    return await service.GetAllAsync();
-});
-
-app.MapGet("/todos/{id}", async (int id, TodoService service) =>
-{
-    var todo = await service.GetTodoAsync(id);
-    return todo is null ? Results.NotFound() : Results.Ok(todo);
-});
-
-app.MapGet("/todos/completed", async (TodoService service) =>
-{
-    return await service.GetAllCompletedAsync();
-});
-
-app.MapGet("/todos/pending", async (TodoService service) =>
-{
-    return await service.GetAllPendingAsync();
-});
-
-app.MapPost("/todos", async (TodoCreateDto dto, TodoService service) =>
-{
-    var todo = await service.CreateAsync(dto);
-    return Results.Created($"/todos/{todo.Id}", todo);
-});
-
-app.MapPut("/todos/{id}", async (int id, TodoUpdateDto dto, TodoService service) =>
-{
-    if (string.IsNullOrWhiteSpace(dto.Title))
-        return Results.BadRequest("Title cannot be empty");
-
-    var updated = await service.UpdateAsync(id, dto);
-    return updated is not null ? Results.Ok(updated) : Results.NotFound();
-});
-
-app.MapDelete("/todos/{id}", async (int id, TodoService service) =>
-{
-    return await service.DeleteAsync(id) ? Results.NoContent() : Results.NotFound();
-});
+app.MapAuthEndpoints();
+app.MapTodoEndpoints();
 
 app.Run();

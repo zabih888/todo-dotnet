@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/zabih/projects/back-end/todo-dotnet/TodoApi.csproj": {}
+    "/home/zabih/Documents/back-end/TodoApi/TodoApi.csproj": {}
   },
   "projects": {
-    "/home/zabih/projects/back-end/todo-dotnet/TodoApi.csproj": {
+    "/home/zabih/Documents/back-end/TodoApi/TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/zabih/projects/back-end/todo-dotnet/TodoApi.csproj",
+        "projectUniqueName": "/home/zabih/Documents/back-end/TodoApi/TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "/home/zabih/projects/back-end/todo-dotnet/TodoApi.csproj",
+        "projectPath": "/home/zabih/Documents/back-end/TodoApi/TodoApi.csproj",
         "packagesPath": "/home/zabih/.nuget/packages/",
-        "outputPath": "/home/zabih/projects/back-end/todo-dotnet/obj/",
+        "outputPath": "/home/zabih/Documents/back-end/TodoApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/zabih/.nuget/NuGet/NuGet.Config"
